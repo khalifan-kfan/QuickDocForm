@@ -1,0 +1,9 @@
+.Machine{
+    display: flex;
+    align-self: baseline;
+    width: 20rem;
+    height: 10rem;
+}
+.HeaderSideLast{
+    width: 50rem;  
+}
