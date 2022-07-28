@@ -238,12 +238,12 @@ const handleChange=(which, pick, position)=>{
           <div className="SideTable">
             <table>
               <tr>
-                <th className="dasheadp">
+                <th className="dasheadp2">
                 Criteria
                 </th >
-                <th className="dasheadp">Right Eye
+                <th className="dasheadp2">Right Eye
                (tick if present)</th>
-               <th className="dasheadp">Left Eye
+               <th className="dasheadp2">Left Eye
                (tick if present)</th>
               </tr>
               <tr>

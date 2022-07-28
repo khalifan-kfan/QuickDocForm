@@ -35,12 +35,11 @@
     padding-right: 1rem;
   }
   .ImageHeader{
-   width: 300px;
-   height: 200px;
+   width: auto;
   }
   .QRImageHeader{
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
   }
   .RightHeader{
     display: flex;
@@ -83,7 +82,7 @@
     border-radius: .5rem;
     width: 20rem;
     height: 2rem;
-
+    font-size: 1rem;
     padding-top: .7rem;
   }
   .TableForm{
@@ -113,12 +112,14 @@
     padding-top: .7rem;
     resize: none;
     border-radius: .5rem;
+    font-size: 1rem;
   }
   .TableInputIn{
     padding-top: .7rem;
     width: 3rem;
     height: 1rem;
     resize: none;
+    font-size: 1rem;
     border-radius: .5rem;
   }
   .headingCloumn2{

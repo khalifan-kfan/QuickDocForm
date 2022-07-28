@@ -21,7 +21,8 @@ const HandlePrevIn =()=>{
         <div className="HeaderR2A"> 
         OTC Examples: R1M1
         </div>
-        <div className="RBodyD">
+        <div className="RBodyDImages">
+        <div className="SideLabel">R1M1</div>
           <div className="Image">
           <img  className="HeaderSide" src={require('../../assests/Images/rm1.png')} alt="retina" />
           <div className="Caption">Source: Nadia K. Waheed & Jay S. Duker. OCT in the Management of Diabetic Macular Edema.</div>

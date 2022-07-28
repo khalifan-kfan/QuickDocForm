@@ -55,9 +55,11 @@
   }
   .RigthAnswer{
     color: red;
+    width: 6rem;
   }
   .LeftAnswer{
     color: blue;
+    width: 6rem;
   }
   .AnswerDisplay{
     background-color: #96D4D4;

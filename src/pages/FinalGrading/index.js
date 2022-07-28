@@ -61,9 +61,12 @@ const HandlePrevIn =()=>{
                   {OLeft}
                 </td>
               </tr>
-              <tr>
+             
+        </table>
+        <table>
+        <tr>
                 <td className="RowHeadw">Management Plan (Either continue annual screening, OCT surveillance 6-12m or Refer)</td>
-                <td className="Row">
+                <td className="Row2">
                 <form>
                     <textarea className="TableInput"
                      name="plan" onChange={e => setPlan(e.target.value)}  type="text" />
@@ -73,7 +76,7 @@ const HandlePrevIn =()=>{
               </tr>
               <tr>
                 <td className="RowHeadw">Name of Clinician</td>
-                <td className="Row">
+                <td className="Row2">
                 <form>
                     <textarea className="TableInput"
                      name="nameC" onChange={e => setNameC(e.target.value)} 
@@ -84,7 +87,7 @@ const HandlePrevIn =()=>{
               </tr>
               <tr>
                 <td className="RowHeadw">Signature</td>
-                <td className="Row">
+                <td className="Row2">
                 <form>
                     <textarea className="TableInput"
                      name="sign" onChange={e => setSign(e.target.value)} 

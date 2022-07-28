@@ -60,7 +60,7 @@ function Firstform({callBack}) {
             DBP,RBG,HbA1C,Cholestrol,
             LDL,HDL,Triglycerides,Albuminuria 
         }
-        console.log(data)
+        //console.log(data)
         if(name !=="" && age  !=="" && sex !==""&& visualAcuityL  !==""&&
         visualAcuityR  !=="" && height  !=="" && weight !=="" && smoker  !==""
         &&diaType  !==""&& diaDate !==""&&daiMed !==""&& Hypertensive !==""&&
@@ -68,8 +68,12 @@ function Firstform({callBack}) {
         SBP!==""&& DBP !=="" && RBG  !=="" && HbA1C !=="" && Cholestrol !==""
         && LDL !=="" && HDL !=="" && Triglycerides  !==""&&Albuminuria !=="" 
         ){
-        
+            if(age>120){
+                alert("Fill proper age") 
+                return
+            }else{
             callBack(data)
+            }
         }else{
             alert("fill all fields please")
         }
@@ -174,7 +178,7 @@ function Firstform({callBack}) {
                 <td className="ui headerTable"> Diabates Diagnosis Date</td>
                 <td>
                     <form>
-                    <textarea className="TableInput" onChange={e => setDiaDate(e.target.value)}  name="daiDate" type="date" />
+                    <input className="TableInput" onChange={e => setDiaDate(e.target.value)}  name="daiDate" type="date" />
                     </form>
                 </td>
             </tr>

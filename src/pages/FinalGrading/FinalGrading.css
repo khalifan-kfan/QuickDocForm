@@ -27,13 +27,19 @@
   .RowHeadw{
     color: #000;
     background-color: #fff;
-    padding: 1.3rem;
+    padding: .5rem;
+    width: 20rem;
 
   }
   table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 1.3rem;
+  }
+  .Row2{
+    background-color: #fff;
+    width: 27rem;
+    align-items: center;
   }
   
   .Row{

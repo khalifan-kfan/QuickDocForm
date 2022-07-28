@@ -28,6 +28,7 @@ const HandleNextin =()=>{
     Rright: rightPick
   }
  handleNext(data)
+
  if(rightChecked){
   localStorage.setItem("RRight",
    "Diabetic Renopathy Absent")

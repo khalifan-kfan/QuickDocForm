@@ -1,5 +1,5 @@
 import React, {  useState } from "react";
-import "./DefinitionPage.css";
+import module from "./DefinitionPage.css";
 
 function DefinitionsPage({handleNext,handlePrev}) { 
 //state
@@ -15,7 +15,7 @@ const HandlePrevIn =()=>{
 
     return (  
         <div  className="dashboard2"> 
-        <table>
+        <table className= {module.Directiontable}>
         <tr>
                 <th className="dashead">OCT Grading </th>
                 <th className="dashead">Criteria</th>

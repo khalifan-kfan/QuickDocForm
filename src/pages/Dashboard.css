@@ -56,6 +56,25 @@
     font-weight: 600;
     text-align: center;
   }
+  .RBodyDImages{
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    align-self: flex-start;
+    padding: 1.5rem;
+  }
+  .SideLabel{
+    color: #fff;
+    background-color: black;
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    border-radius: 20rem;
+    align-items: center;
+    justify-content: center;
+   align-self: center;
+
+  }
   .SmallHeading{
     font-size: 2rem;
     font-weight: 600;

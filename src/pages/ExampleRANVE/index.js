@@ -21,7 +21,8 @@ const HandlePrevIn =()=>{
         <div className="HeaderR2A"> 
         OTC Examples: R3A (NVE)
         </div>
-        <div className="RBodyD">
+        <div className="RBodyDImages">
+          <div className="SideLabel">R3A (NVE) </div>
           <div className="Image">
           <img  className="HeaderSide" src={require('../../assests/Images/nve.png')} alt="retina" />
           <div className="Caption">Source: octscans.com</div>
