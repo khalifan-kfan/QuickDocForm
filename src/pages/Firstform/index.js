@@ -37,6 +37,7 @@ function Firstform({callBack}) {
     const [HDL, setHDL] = useState("")
     const [Triglycerides, setTriglycerides] = useState("")
     const [Albuminuria,setAlbuminuria] = useState("")
+    const [consent, setConsent] = useState(false)
 
     const handleNext =()=>{
         //all fields should be filled
@@ -76,7 +77,10 @@ function Firstform({callBack}) {
                 alert("Fill proper blood pressure") 
                 return
             }
-
+            if(!consent){
+                alert("The patient must first concent") 
+                return
+            }
             callBack(data)
             
         }else{
@@ -91,6 +95,7 @@ function Firstform({callBack}) {
     return (
         <div className="dashboard">     
          <div className="HeaderSection">
+
             <div className="LeftHeader">
             <div  >
             <img  className="ImageHeader" src={require('../../assests/Images/LogoICEID.png')} alt="IASON" />
@@ -103,6 +108,23 @@ function Firstform({callBack}) {
           </div>
           <div className="SubHeading"> DR SCREENING</div>
           <div className="SmallHeading"> Medical History Data</div>
+          <div className="Concent">
+            
+            <div className="ConcentHead">Consent</div>
+            <div className="ConcentText">I consent to the use of my anonymised data for research
+                 and audit purposes, including the publication of 
+                aggregate results and sharing of anonymised data with other researchers</div>
+            <div className="ConcentBox">
+                <div>
+                <input type="checkbox"
+                 value="diabeticRetinopathy" 
+                checked={consent} 
+                className="CheckBox" id="1" 
+                onChange={()=>setConsent(!consent)}
+                  />  
+                  </div>
+                  </div>
+          </div>
           <span className="formheading"> Patient name: <input  onChange={e => setName(e.target.value)} className="Input" type="text" placeholder="Name"/></span>
          <div className="TableForm">
          <div className="Columns">
@@ -118,9 +140,17 @@ function Firstform({callBack}) {
                 <td className="ui">
                     <form>
                     <input  
-                    onChange={e => setAge(e.target.value)}
+                    onChange={e =>{ 
+                        if(e.target.value<120){
+                        setAge(e.target.value)
+                        }else{
+                            alert("Invalid age")
+                        }
+                        }
+                    }
                      className="TableInput"  
                      type="number"
+                     value={age}
                      name="age"
                       placeholder={"1-120"}
                       />
@@ -251,7 +281,16 @@ function Firstform({callBack}) {
                 <td className="ui headerTable"> Systolic Blood Pressure</td>
                 <td className="ui">
                     <form>
-                    <input className="TableInput" onChange={e => setSBP(e.target.value)} type="number" name="Sbp" 
+                    <input className="TableInput" onChange={e =>{ 
+                        if(e.target.value < 301 && e.target.value > -1){
+                        setSBP(e.target.value)
+                        }else{
+                            alert("Invalid blood pressure")
+                        }
+                        }
+                    } type="number"
+                    value={SBP}
+                    name="Sbp" 
                     placeholder={"1-300"}  />
                     </form>
                 </td>

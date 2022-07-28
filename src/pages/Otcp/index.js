@@ -232,7 +232,7 @@ const handleChange=(which, pick, position)=>{
         </div>
         <div className="RBody">
           <div className="Image">
-          <img  className="HeaderSide" src={require('../../assests/Images/otcp.jpg')} alt="retina" />
+          <img  className="HeaderSide" src={require('../../assests/Images/octp.jpg')} alt="retina" />
           <div className="Caption">Source: AAO Eye Wiki</div>
           </div>
           <div className="SideTable">

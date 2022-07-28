@@ -184,7 +184,7 @@ const HandlePrevIn =()=>{
         </div>
         <div className="RBody">
           <div className="Image">
-          <img  className="HeaderSide" src={require('../../assests/Images/retina5.png')} alt="retina" />
+          <img  className="HeaderSide" src={require('../../assests/Images/ret5.jpg')} alt="retina" />
           <div className="Caption">Source: IDRiD Dataset</div>
           </div>
           <div className="SideTable">

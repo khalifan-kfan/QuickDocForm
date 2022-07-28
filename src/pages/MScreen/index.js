@@ -211,7 +211,7 @@ const handleChange=(which, pick, position)=>{
         </div>
         <div className="RBody">
           <div className="Image">
-          <img  className="HeaderSide" src={require('../../assests/Images/m1.jpg')} alt="retina" />
+          <img  className="HeaderSide" src={require('../../assests/Images/m2.jpg')} alt="retina" />
           <div className="Caption">Source: IDRiD Dataset</div>
           </div>
           <div className="SideTable">

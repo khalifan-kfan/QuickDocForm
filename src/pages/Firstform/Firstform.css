@@ -85,6 +85,8 @@
     font-size: 1rem;
     padding-top: .7rem;
     padding-left: .9rem;
+   
+
   }
   .TableForm{
     display: flex;
@@ -109,11 +111,35 @@
     width: 25rem;
     border: 1 solid #000;
   }
+  .Concent{
+    display: flex;
+    flex-direction: row;
+  }
+  .ConcentHead{
+    display: flex;
+
+  }
+  .ConcentHead{
+    background-color: #fff;
+    text-align: center;
+    align-items: center;
+    border: 1px solid #000;
+  }
+  .ConcentBox{
+    border: 1px solid #000;
+  }
+  .ConcentText{
+    background-color: #fff;
+    text-align: center;
+    width: 40rem;
+    border: 1px solid #000;
+  }
   .TableInput{
     padding-top: .7rem;
     resize: none;
     border-radius: .5rem;
     font-size: 1rem;
+    padding-bottom: .5rem;
   }
   .TableInputIn{
     padding-top: .7rem;
@@ -121,6 +147,7 @@
     height: 1rem;
     resize: none;
     font-size: 1rem;
+    padding-bottom: .5rem;
     border-radius: .5rem;
   }
   .headingCloumn2{
