@@ -28,7 +28,7 @@
     align-self: center;
   }
   .HeaderSide{
-    width: auto;
+    width: 100%;
     height: 40rem;
   }
   .Caption{

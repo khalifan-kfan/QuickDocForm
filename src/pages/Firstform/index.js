@@ -71,9 +71,14 @@ function Firstform({callBack}) {
             if(age>120){
                 alert("Fill proper age") 
                 return
-            }else{
-            callBack(data)
             }
+            if(SBP>300){
+                alert("Fill proper blood pressure") 
+                return
+            }
+
+            callBack(data)
+            
         }else{
             alert("fill all fields please")
         }
@@ -98,7 +103,7 @@ function Firstform({callBack}) {
           </div>
           <div className="SubHeading"> DR SCREENING</div>
           <div className="SmallHeading"> Medical History Data</div>
-          <span className="formheading"> Patient name: <textarea  onChange={e => setName(e.target.value)} className="Input" type="text" placeholder="Name"/></span>
+          <span className="formheading"> Patient name: <input  onChange={e => setName(e.target.value)} className="Input" type="text" placeholder="Name"/></span>
          <div className="TableForm">
          <div className="Columns">
          <div className="headingCloumn"> 
@@ -110,17 +115,23 @@ function Firstform({callBack}) {
           <tbody className="bodyStyle" >
             <tr className="bodyStyle">
                 <td className="ui headerTable"> Age</td>
-                <td>
+                <td className="ui">
                     <form>
-                    <textarea  onChange={e => setAge(e.target.value)} className="TableInput"  type="number" name="age" placeholder="20" />
+                    <input  
+                    onChange={e => setAge(e.target.value)}
+                     className="TableInput"  
+                     type="number"
+                     name="age"
+                      placeholder={"1-120"}
+                      />
                     </form>
                 </td>
             </tr>
             <tr>
                 <td className="ui headerTable"> Sex</td>
-                <td>
+                <td className="ui">
                     <form>
-                    <select id="sex"  onChange={e => setSex(e.target.value)}>
+                    <select  className="Select" id="sex"  onChange={e => setSex(e.target.value)}>
     <option value="male"  >male</option>
     <option value="femmale" >female</option>
 </select>
@@ -129,34 +140,38 @@ function Firstform({callBack}) {
             </tr>
             <tr>
                 <td className="ui headerTable"> Visual Acuity</td>
-                <td>
+                <td className="ui">
                     <form  className="Insiderow">
                     <span>
-                    Left: <textarea className="TableInputIn" onChange={e => setvisualAcuityL(e.target.value)}  name="VAleft"  type="text"  />
-                    Right: <textarea className="TableInputIn" onChange={e => setvisualAcuityR(e.target.value)} name="VAright"  type="text"  />
+                    Left: <input className="TableInputIn" 
+                     onChange={e => setvisualAcuityL(e.target.value)}  
+                     name="VAleft"  type="text"  />
+                    Right: <input className="TableInputIn" 
+                    onChange={e => setvisualAcuityR(e.target.value)}
+                     name="VAright"  type="text"  />
                     </span>
                     </form>
                 </td>
             </tr>
             <tr>
                 <td className="ui headerTable"> height</td>
-                <td>
+                <td className="ui">
                     <form>
-                    <textarea className="TableInput" name="height" onChange={e => setHeight(e.target.value)}  type="number" placeholder="20" />
+                    <input className="TableInput" name="height" onChange={e => setHeight(e.target.value)}  type="number" placeholder="20" />
                     </form>
                 </td>
             </tr>
             <tr>
                 <td className="ui headerTable"> Weight</td>
-                <td>
+                <td className="ui">
                     <form>
-                    <textarea className="TableInput"  onChange={e => setWeight(e.target.value)} name="weigth" type="text" placeholder="60" />
+                    <input className="TableInput"  onChange={e => setWeight(e.target.value)} name="weigth" type="number" placeholder="60" />
                     </form>
                 </td>
             </tr>
             <tr>
                 <td className="ui headerTable"> Smoker Status</td>
-                <td>
+                <td className="ui">
                     <form>
                     <select id="smoker" onChange={e => setSmoker(e.target.value)} >
     <option value="currents">current smoker </option>
@@ -168,15 +183,15 @@ function Firstform({callBack}) {
             </tr>
             <tr>
                 <td className="ui headerTable"> Diabetes type</td>
-                <td>
+                <td className="ui">
                     <form>
-                    <textarea className="TableInput" onChange={e => setdiaType(e.target.value)} name="daiType"  type="text"  />
+                    <input className="TableInput" onChange={e => setdiaType(e.target.value)} name="daiType"  type="text"  />
                     </form>
                 </td>
             </tr>
             <tr>
                 <td className="ui headerTable"> Diabates Diagnosis Date</td>
-                <td>
+                <td  className="ui">
                     <form>
                     <input className="TableInput" onChange={e => setDiaDate(e.target.value)}  name="daiDate" type="date" />
                     </form>
@@ -184,15 +199,15 @@ function Firstform({callBack}) {
             </tr>
             <tr>
                 <td className="ui headerTable"> Diabates Medication</td>
-                <td>
+                <td className="ui">
                     <form>
-                    <textarea className="TableInput" onChange={e => setDiaMed(e.target.value)} name="daiMed"  type="text" placeholder="any" />
+                    <input className="TableInput" onChange={e => setDiaMed(e.target.value)} name="daiMed"  type="text" placeholder="any" />
                     </form>
                 </td>
             </tr>
             <tr>
                 <td className="ui headerTable"> Hypertensive?</td>
-                <td>
+                <td className="ui">
                     <form>
                     <div onChange={e => setHypertensiveL(e.target.value)}>
                       <input type="radio" value="yes" name="Hypertensive"/> Yes
@@ -203,7 +218,7 @@ function Firstform({callBack}) {
             </tr>
             <tr>
                 <td className="ui headerTable"> Cardiovascular Disease? </td>
-                <td>
+                <td className="ui">
                     <form>
                     <div onChange={e => setCardiovascular(e.target.value)}>
                       <input type="radio" value="yea" name="Cardiovascular"/> Yes
@@ -214,11 +229,11 @@ function Firstform({callBack}) {
             </tr>
             <tr>
                 <td className="ui headerTable"> OTC Signal Strength</td>
-                <td>
+                <td className="ui">
                 <form  className="Insiderow">
                     <span>
-                    Left: <textarea className="TableInputIn"  onChange={e => setOTCleft(e.target.value)} name="OTCSleft"  type="text" placeholder="20" />
-                    Right: <textarea className="TableInputIn"  name="OTCSright" onChange={e => setOTCSright(e.target.value)} type="text" placeholder="20" />
+                    Left: <input className="TableInputIn"  onChange={e => setOTCleft(e.target.value)} name="OTCSleft"  type="text" placeholder="20" />
+                    Right: <input className="TableInputIn"  name="OTCSright" onChange={e => setOTCSright(e.target.value)} type="text" placeholder="20" />
                     </span>
                     </form>
                 </td>
@@ -234,71 +249,73 @@ function Firstform({callBack}) {
           <tbody className="bodyStyle" >
             <tr>
                 <td className="ui headerTable"> Systolic Blood Pressure</td>
-                <td>
+                <td className="ui">
                     <form>
-                    <textarea className="TableInput" onChange={e => setSBP(e.target.value)} type="text" name="Sbp"  />
+                    <input className="TableInput" onChange={e => setSBP(e.target.value)} type="number" name="Sbp" 
+                    placeholder={"1-300"}  />
                     </form>
                 </td>
             </tr>
             <tr>
                 <td className="ui headerTable"> Diastolic Blood Pressure</td>
-                <td>
+                <td className="ui">
                     <form>
-                    <textarea  className="TableInput" onChange={e => setDBP(e.target.value)} type="text" name="DBP" />
+                    <input  className="TableInput" onChange={e => setDBP(e.target.value)} type="number" placeholder={"number"} name="DBP" />
                     </form>
                 </td>
             </tr>
             <tr>
                 <td className="ui headerTable"> Random Blood Glucose</td>
-                <td>
+                <td className="ui">
                     <form>
-                    <textarea className="TableInput" onChange={e => setRBG(e.target.value)} type="text" name="RBG"  />
+                    <input className="TableInput" onChange={e => setRBG(e.target.value)} type="number"
+                     placeholder={"number"} name="RBG"  />
                     </form>
                 </td>
             </tr>   
             <tr>
                 <td className="ui headerTable"> HbA1C</td>
-                <td>
+                <td className="ui">
                     <form>
-                    <textarea className="TableInput" onChange={e => setHbA1C(e.target.value)} name="HbA1C"  type="text"  />
+                    <input className="TableInput" onChange={e => setHbA1C(e.target.value)} name="HbA1C"  type="number" placeholder={"number"}  />
                     </form>
                 </td>
             </tr>
             <tr>
                 <td className="ui headerTable"> Total Cholestrol </td>
-                <td>
+                <td className="ui">
                     <form>
-                    <textarea className="TableInput"   onChange={e => setCholestrol(e.target.value)}name="cholestrol" type="text"  />
+                    <input className="TableInput"   onChange={e => setCholestrol(e.target.value)}name="cholestrol" type="number" placeholder={"number"}  />
                     </form>
                 </td>
             </tr>
             <tr>
                 <td className="ui headerTable"> LDL</td>
-                <td>
+                <td className="ui">
                     <form>
-                    <textarea className="TableInput" onChange={e => setLDL(e.target.value)} type="text" name="LDL"/>
+                    <input className="TableInput" onChange={e => setLDL(e.target.value)}  type="number" placeholder={"number"} name="LDL"/>
                     </form>
                 </td>
             </tr>
             <tr>
                 <td className="ui headerTable">HDL</td>
-                <td>
+                <td className="ui">
                     <form>
-                    <textarea className="TableInput"  onChange={e => setHDL(e.target.value)}name="HDL"  type="text"  />
+                    <input className="TableInput"  onChange={e => setHDL(e.target.value)}name="HDL"   type="number" placeholder={"number"}  />
                     </form>
                 </td>
             </tr>
             <tr>
                 <td className="ui headerTable"> Triglycerides</td>
-                <td>
+                <td className="ui">
                     <form>
-                    <textarea className="TableInput"  onChange={e => setTriglycerides(e.target.value)} name="Triglycerides" />
+                    <input className="TableInput"  type="number" placeholder={"number"} onChange={e => setTriglycerides(e.target.value)} name="Triglycerides" />
                     </form>
                 </td>
             </tr>
             <tr>
                 <td className="ui headerTable"> Albuminuria? </td>
-                <td>
+                <td className="ui">
                     <form>
                     <div onChange={e => setAlbuminuria(e.target.value)}>
                       <input type="radio" value="yea" name="Albuminuria"/> Yes

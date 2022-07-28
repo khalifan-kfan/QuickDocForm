@@ -24,12 +24,17 @@
   .RBody{
     display: flex;
     flex-direction: row;
-    gap: 2rem;
-    align-self: baseline;
+   
+    align-self: flex-start;
   }
   .HeaderSide{
     width: 25rem;
     height: 25rem;
+  }
+  .SideTable{
+    display: flex;
+    flex-direction: column;
+    justify-self: flex-end;
   }
   .Caption{
     text-align: center;
@@ -48,10 +53,16 @@
    background-color: grey;
    color: #000;
   }
+  form{
+    display: flex;
+    justify-content: center;
+  }
   
   .CheckBox{
+    
     height: 3.5rem;
     width: 3rem;
+
   }
   .RigthAnswer{
     color: red;

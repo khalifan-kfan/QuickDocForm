@@ -13,20 +13,20 @@ const [leftPick, setLeftPick] = useState(leftSelection);
 const [rightPick, setRightPick] = useState(rightSelection);
 
 useEffect(() => {
-  if("R1" in leftPick ){
-    if(0 in leftPick.R1){
+  if("R5" in leftPick ){
+    if(0 in leftPick.R5){
     setleftChecked1(true)
     }
-    if(1 in leftPick.R1){
+    if(1 in leftPick.R5){
       setleftChecked2(true)
     }
    
   }
-  if("R1" in rightPick ){
-    if(0 in rightPick.R1){
+  if("R5" in rightPick ){
+    if(0 in rightPick.R5){
       setrightChecked1(true)
       }
-      if(1 in rightPick.R1){
+      if(1 in rightPick.R5){
         setrightChecked2(true)
       }
      
@@ -38,31 +38,31 @@ const deleteKey =(obj,keym)=>{
 }
 const handleChange=(which, pick, position)=>{
   if(which==="right"){  
-    if(("R1" in rightPick) || Object.keys(rightPick).length===0){
+    if(("R5" in rightPick) || Object.keys(rightPick).length===0){
       //add or remove it
-      if("R1" in rightPick){
-        var obk =  {...rightPick.R1}
+      if("R5" in rightPick){
+        var obk =  {...rightPick.R5}
        
-        if(rightPick.R1[position] !== undefined){
+        if(rightPick.R5[position] !== undefined){
           
           var obj = deleteKey(obk, position)
          if(position===0){
-          setRightPick({R1: obj })
+          setRightPick({R5: obj })
           setrightChecked1(false)
          }
          if(position===1){
-          setRightPick({R1: obj })
+          setRightPick({R5: obj })
           setrightChecked2(false)
          }
        
           }else{
             if(position===0){
 
-              setRightPick({R1:{...rightPick.R1, 0:pick}}) 
+              setRightPick({R5:{...rightPick.R5, 0:pick}}) 
               setrightChecked1(true)
              }
              if(position===1){
-              setRightPick({R1:{...rightPick.R1, 1:pick}})
+              setRightPick({R5:{...rightPick.R5, 1:pick}})
               setrightChecked2(true)
              }
             
@@ -72,48 +72,48 @@ const handleChange=(which, pick, position)=>{
       }
      if(Object.keys(rightPick).length===0){
       if(position===0){
-        setRightPick({R1:{0:pick}});
+        setRightPick({R5:{0:pick}});
         setrightChecked1(true)
        }
        if(position===1){
-        setRightPick({R1:{1:pick}});
+        setRightPick({R5:{1:pick}});
         setrightChecked2(true)
        }
     
      }
     }
-     if(!("R1" in rightPick )&& Object.keys(rightPick).length>0){
+     if(!("R5" in rightPick )&& Object.keys(rightPick).length>0){
       alert("Can't add to right eye")
     } 
 
   }
   if(which==="left"){
     
-    if(("R1" in leftPick) || Object.keys(leftPick).length===0){
+    if(("R5" in leftPick) || Object.keys(leftPick).length===0){
       //add or remove it
-      if("R1" in leftPick){
-        var obk =  {...leftPick.R1}
+      if("R5" in leftPick){
+        var obk =  {...leftPick.R5}
         
-        if(leftPick.R1[position] !== undefined){
+        if(leftPick.R5[position] !== undefined){
         
           var obj = deleteKey(obk, position)
          if(position===0){
-          setLeftPick({R1: obj })
+          setLeftPick({R5: obj })
           setleftChecked1(false)
          }
          if(position===1){
-          setLeftPick({R1: obj })
+          setLeftPick({R5: obj })
           setleftChecked2(false)
          }
         
           }else{
             if(position===0){
 
-              setLeftPick({R1:{...leftPick.R1, 0:pick}}) 
+              setLeftPick({R5:{...leftPick.R5, 0:pick}}) 
               setleftChecked1(true)
              }
              if(position===1){
-              setLeftPick({R1:{...leftPick.R1, 1:pick}})
+              setLeftPick({R5:{...leftPick.R5, 1:pick}})
               setleftChecked2(true)
              }
             
@@ -123,17 +123,17 @@ const handleChange=(which, pick, position)=>{
       }
      if(Object.keys(leftPick).length===0){
       if(position===0){
-        setLeftPick({R1:{0:pick}});
+        setLeftPick({R5:{0:pick}});
         setleftChecked1(true)
        }
        if(position===1){
-        setLeftPick({R1:{1:pick}});
+        setLeftPick({R5:{1:pick}});
         setleftChecked2(true)
        }
        
      }
     }
-     if(!("R1" in leftPick )&& Object.keys(leftPick).length>0){
+     if(!("R5" in leftPick )&& Object.keys(leftPick).length>0){
       alert("Can't add to left eye")
     } 
   
@@ -235,7 +235,6 @@ available)</td>
                 <input type="checkbox"  checked={leftChecked2} 
                 className="CheckBox" id="myCheckleft" 
                 onChange={(e) => {handleChange("left",e.target.value,1)}}/>
-               
                   </form></td>
               </tr>
               

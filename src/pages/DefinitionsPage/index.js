@@ -9,10 +9,6 @@ const HandleNextin =()=>{
 const HandlePrevIn =()=>{
   handlePrev()
 }
-
-
-  
-
     return (  
         <div  className="dashboard2"> 
         <table className= {module.Directiontable}>

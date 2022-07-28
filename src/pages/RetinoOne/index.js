@@ -120,7 +120,8 @@ const handleRightChange=(pick)=>{
               <tr>
                 <td>No signs of diabetic retinopathy</td>
                 <td><form>
-                <input type="checkbox" value="diabeticRetinopathy" 
+                <input type="checkbox"
+                 value="diabeticRetinopathy" 
                 checked={rightChecked} 
                 className="CheckBox" id="1" 
                 onChange={(e) => {handleRightChange(e.target.value)}

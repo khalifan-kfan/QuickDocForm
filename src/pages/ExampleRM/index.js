@@ -24,8 +24,8 @@ const HandlePrevIn =()=>{
         <div className="RBodyDImages">
         <div className="SideLabel">R1M1</div>
           <div className="Image">
-          <img  className="HeaderSide" src={require('../../assests/Images/rm1.png')} alt="retina" />
-          <div className="Caption">Source: Nadia K. Waheed & Jay S. Duker. OCT in the Management of Diabetic Macular Edema.</div>
+          <img  className="" src={require('../../assests/Images/rm2.png')} alt="retina" />
+          
          
           </div>
         </div>

@@ -56,11 +56,11 @@ const HandleNextin =()=>{
  handleNext(data)
  if((rightChecked1 || rightChecked2 || rightChecked3|| rightChecked4)){
   localStorage.setItem("ORight",
-  "OTC positive")
+  "OCT positive")
  }
  if((leftChecked1 || leftChecked2||rightChecked3|| rightChecked4)){
   localStorage.setItem("OLeft",
-  "OTC positive")
+  "OCT positive")
  }
 }
 const HandlePrevIn =()=>{
@@ -71,11 +71,11 @@ const HandlePrevIn =()=>{
   handlePrev(data)
   if((rightChecked1 || rightChecked2 || rightChecked3|| rightChecked4)){
     localStorage.setItem("ORight",
-    "OTC positive")
+    "OCT positive")
    }
    if((leftChecked1 || leftChecked2||rightChecked3|| rightChecked4)){
     localStorage.setItem("OLeft",
-    "OTC positive")
+    "OCT positive")
    }
 }
 const deleteKey =(obj,keym)=>{
@@ -330,10 +330,10 @@ const handleChange=(which, pick, position)=>{
             <div>* Normal CRT differ depending on machine used, check reference values for your OCT</div>
             <span ><div  className="RigthAnswer">Right eye:</div>
             <div className="AnswerDisplay">{(rightChecked1 || rightChecked2 || 
-                rightChecked3|| rightChecked4)?"OTC positive":""}</div></span>
+                rightChecked3|| rightChecked4)?"OCT positive":""}</div></span>
             <span><div  className="LeftAnswer">Left eye:</div>
             <div  className="AnswerDisplay">{(leftChecked1 || leftChecked2
-               || leftChecked3||leftChecked4)?"OTC positive":""}</div></span>
+               || leftChecked3||leftChecked4)?"OCT positive":""}</div></span>
            
           </div>
         </div>

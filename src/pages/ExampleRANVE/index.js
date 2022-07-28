@@ -24,8 +24,8 @@ const HandlePrevIn =()=>{
         <div className="RBodyDImages">
           <div className="SideLabel">R3A (NVE) </div>
           <div className="Image">
-          <img  className="HeaderSide" src={require('../../assests/Images/nve.png')} alt="retina" />
-          <div className="Caption">Source: octscans.com</div>
+          <img  className="" src={require('../../assests/Images/nve2.png')} alt="retina" />
+          
          
           </div>
         </div>
