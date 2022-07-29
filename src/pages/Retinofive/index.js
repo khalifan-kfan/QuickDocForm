@@ -54,6 +54,10 @@ const handleChange=(which, pick, position)=>{
           setRightPick({R5: obj })
           setrightChecked2(false)
          }
+         if(Object.keys(obj).length===0){
+          
+          setRightPick({})
+         }
        
           }else{
             if(position===0){
@@ -105,6 +109,10 @@ const handleChange=(which, pick, position)=>{
           setLeftPick({R5: obj })
           setleftChecked2(false)
          }
+         if(Object.keys(obj).length===0){
+          
+          setLeftPick({})
+         }
         
           }else{
             if(position===0){
@@ -152,11 +160,17 @@ const HandleNextin =()=>{
   )){
   localStorage.setItem("RRight",
   " Treated proliferative retinopathy present")
+ }else{
+  localStorage.setItem("RRight",
+  "")
  }
  if((rightChecked1 && rightChecked2  
   )){
   localStorage.setItem("RLeft",
    "Treated proliferative retinopathy present")
+ }else{
+  localStorage.setItem("RLeft",
+  "")
  }
 }
 const HandlePrevIn =()=>{

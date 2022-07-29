@@ -43,10 +43,16 @@ const HandleNextin =()=>{
  if((rightChecked1 || rightChecked2 )){
   localStorage.setItem("ORight",
   "OCT negative")
+ } else{
+  localStorage.setItem("ORight",
+  "")
  }
  if((leftChecked1 || leftChecked2)){
   localStorage.setItem("OLeft",
    "OCT negative")
+ } else{
+  localStorage.setItem("OLeft",
+  "")
  }
 }
 const HandlePrevIn =()=>{
@@ -59,9 +65,16 @@ const HandlePrevIn =()=>{
     localStorage.setItem("ORight",
     "OCT negative")
    }
+   else{
+    localStorage.setItem("ORight",
+    "")
+   }
    if((leftChecked1 || leftChecked2)){
     localStorage.setItem("OLeft",
      "OCT negative")
+   }else{
+    localStorage.setItem("OLeft",
+    "")
    }
 }
 const deleteKey =(obj,keym)=>{
@@ -86,7 +99,10 @@ const handleChange=(which, pick, position)=>{
           setRightPick({O1: obj })
           setrightChecked2(false)
          }
-       
+         if(Object.keys(obj).length===0){
+        
+          setRightPick({})
+         }
           }else{
             if(position===0){
 
@@ -136,6 +152,10 @@ const handleChange=(which, pick, position)=>{
          if(position===1){
           setLeftPick({O1: obj })
           setleftChecked2(false)
+         }
+         if(Object.keys(obj).length===0){
+          
+          setLeftPick({})
          }
         
           }else{

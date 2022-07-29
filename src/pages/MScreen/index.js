@@ -49,11 +49,16 @@ const HandleNextin =()=>{
  if((rightChecked1 || rightChecked2 || rightChecked3)){
   localStorage.setItem("MRight",
   "High risk moculopathy present")
- }
+ }else{
+  localStorage.setItem("MRight",
+  "")}
  if((leftChecked1 || leftChecked2|| leftChecked3)){
   localStorage.setItem("MLeft",
    "High risk moculopathy present")
- }
+ }else{
+  localStorage.setItem("MLeft",
+  "")}
+ 
 }
 const HandlePrevIn =()=>{
   var data ={
@@ -64,11 +69,16 @@ const HandlePrevIn =()=>{
   if((rightChecked1 || rightChecked2 || rightChecked3)){
     localStorage.setItem("MRight",
     "High risk moculopathy present")
-   }
+   }else{
+    localStorage.setItem("MRight",
+    "")}
    if((leftChecked1 || leftChecked2|| leftChecked3)){
     localStorage.setItem("MLeft",
      "High risk moculopathy present")
-   }
+   }else{
+    localStorage.setItem("MRight",
+    "")}
+
 }
 
 const deleteKey =(obj,keym)=>{
@@ -97,6 +107,10 @@ const handleChange=(which, pick, position)=>{
          if(position===2){
           setRightPick({M1: obj })
           setrightChecked3(false)
+         }
+         if(Object.keys(obj).length===0){
+          
+          setRightPick({})
          }
           }else{
             if(position===0){
@@ -158,6 +172,10 @@ const handleChange=(which, pick, position)=>{
          if(position===2){
           setLeftPick({M1: obj })
           setleftChecked3(false)
+         }
+         if(Object.keys(obj).length===0){
+          
+          setLeftPick({})
          }
           }else{
             if(position===0){
@@ -311,7 +329,7 @@ const handleChange=(which, pick, position)=>{
         
       );
 
-    }
+}
 
 
  

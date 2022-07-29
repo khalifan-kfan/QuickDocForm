@@ -22,11 +22,15 @@ const HandleNextin =()=>{
  if((rightChecked1 && rightChecked2 && rightChecked3)){
   localStorage.setItem("ORight",
   "BorderLine present")
- }
+ }else{
+  localStorage.setItem("ORight",
+  "")}
  if((leftChecked1 && leftChecked2&&rightChecked3)){
   localStorage.setItem("OLeft",
   "BorderLine present")
- }
+ }else{
+  localStorage.setItem("OLeft",
+  "")}
 }
 const HandlePrevIn =()=>{
   var data ={
@@ -34,6 +38,19 @@ const HandlePrevIn =()=>{
     Oright: rightPick
   }
   handlePrev(data)
+  if((rightChecked1 && rightChecked2 && rightChecked3)){
+    localStorage.setItem("ORight",
+    "BorderLine present")
+   }else{
+    localStorage.setItem("ORight",
+    "")}
+   if((leftChecked1 && leftChecked2&&rightChecked3)){
+    localStorage.setItem("OLeft",
+    "BorderLine present")
+   }else{
+    localStorage.setItem("OLeft",
+    "")}
+  
 }
 useEffect(() => {
   if("O2" in leftPick ){
@@ -86,6 +103,10 @@ const handleChange=(which, pick, position)=>{
          if(position===2){
           setRightPick({O2: obj })
           setrightChecked3(false)
+         }
+         if(Object.keys(obj).length===0){
+         
+          setRightPick({})
          }
           }else{
             if(position===0){
@@ -147,6 +168,10 @@ const handleChange=(which, pick, position)=>{
          if(position===2){
           setLeftPick({O2: obj })
           setleftChecked3(false)
+         }
+         if(Object.keys(obj).length===0){
+          
+          setLeftPick({})
          }
           }else{
             if(position===0){

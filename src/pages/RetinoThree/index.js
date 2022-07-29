@@ -59,12 +59,19 @@ const HandleNextin =()=>{
   rightChecked3|| rightChecked4)){
   localStorage.setItem("RRight",
   "Pre-proliferative retinopathy present")
+ }else{
+  localStorage.setItem("RRight",
+  "")
  }
  if((leftChecked1 || leftChecked2
   || leftChecked3||leftChecked4)){
   localStorage.setItem("RLeft",
    "Pre-proliferative retinopathy present")
+ }else{
+  localStorage.setItem("RLeft",
+  "")
  }
+
 }
 const HandlePrevIn =()=>{
   var data ={
@@ -76,11 +83,17 @@ const HandlePrevIn =()=>{
     rightChecked3|| rightChecked4)){
     localStorage.setItem("RRight",
     "Pre-proliferative retinopathy present")
+   }else{
+    localStorage.setItem("RRight",
+    "")
    }
    if((leftChecked1 || leftChecked2
     || leftChecked3||leftChecked4)){
     localStorage.setItem("RLeft",
      "Pre-proliferative retinopathy present")
+   }else{
+    localStorage.setItem("RLeft",
+    "")
    }
 }
 const deleteKey =(obj,keym)=>{
@@ -111,6 +124,9 @@ const handleChange=(which, pick, position)=>{
          if(position===3){
           setRightPick({R2: obj })
           setrightChecked4(false)
+         }
+         if(Object.keys(obj).length===0){
+          setRightPick({})
          }
           }else{
             if(position===0){
@@ -182,6 +198,9 @@ const handleChange=(which, pick, position)=>{
           setLeftPick({R2: obj })
           setleftChecked4(false)
          }
+         if(Object.keys(obj).length===0){
+          setLeftPick({})
+         }
           }else{
             if(position===0){
               setLeftPick({R2:{...leftPick.R2, 0:pick}}) 
@@ -227,7 +246,6 @@ const handleChange=(which, pick, position)=>{
     } 
   }
 
-  
 }
 
     return (  

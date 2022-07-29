@@ -57,10 +57,16 @@ const HandleNextin =()=>{
  if((rightChecked1 || rightChecked2 || rightChecked3|| rightChecked4)){
   localStorage.setItem("ORight",
   "OCT positive")
+ }else{
+  localStorage.setItem("ORight",
+  "")
  }
  if((leftChecked1 || leftChecked2||rightChecked3|| rightChecked4)){
   localStorage.setItem("OLeft",
   "OCT positive")
+ }else{
+  localStorage.setItem("OLeft",
+  "")
  }
 }
 const HandlePrevIn =()=>{
@@ -72,10 +78,16 @@ const HandlePrevIn =()=>{
   if((rightChecked1 || rightChecked2 || rightChecked3|| rightChecked4)){
     localStorage.setItem("ORight",
     "OCT positive")
+   }else{
+    localStorage.setItem("ORight",
+    "")
    }
    if((leftChecked1 || leftChecked2||rightChecked3|| rightChecked4)){
     localStorage.setItem("OLeft",
     "OCT positive")
+   }else{
+    localStorage.setItem("OLeft",
+    "")
    }
 }
 const deleteKey =(obj,keym)=>{
@@ -106,6 +118,10 @@ const handleChange=(which, pick, position)=>{
          if(position===3){
           setRightPick({R2: obj })
           setrightChecked4(false)
+         }
+         if(Object.keys(obj).length===0){
+        
+          setRightPick({})
          }
           }else{
             if(position===0){
@@ -176,6 +192,10 @@ const handleChange=(which, pick, position)=>{
          if(position===3){
           setLeftPick({R2: obj })
           setleftChecked4(false)
+         }
+         if(Object.keys(obj).length===0){
+        
+          setLeftPick({})
          }
           }else{
             if(position===0){

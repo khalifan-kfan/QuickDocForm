@@ -49,11 +49,18 @@ const HandleNextin =()=>{
   || rightChecked3)){
   localStorage.setItem("RRight",
    "Background retinopathy present")
+ }else{
+  localStorage.setItem("RRight",
+   "")
  }
  if((leftChecked1 ||
   leftChecked2 || leftChecked3)){
   localStorage.setItem("RLeft",
    "Background retinopathy present")
+ }
+ else{
+  localStorage.setItem("RLeft",
+   "")
  }
 }
 const HandlePrevIn =()=>{
@@ -66,11 +73,18 @@ const HandlePrevIn =()=>{
     || rightChecked3)){
     localStorage.setItem("RRight",
      "Background retinopathy present")
+   }else{
+    localStorage.setItem("RRight",
+     "")
    }
    if((leftChecked1 ||
     leftChecked2 || leftChecked3)){
     localStorage.setItem("RLeft",
      "Background retinopathy present")
+   }else{
+      localStorage.setItem("RLeft",
+       "")
+     
    }
 }
 const deleteKey =(obj,keym)=>{
@@ -98,6 +112,13 @@ const handleChange=(which, pick, position)=>{
          if(position===2){
           setRightPick({R1: obj })
           setrightChecked3(false)
+         }
+         
+         if(Object.keys(obj).length===0){
+          // var obk2 =  {...rightPick}
+          // delete obk2["R1"]
+          setRightPick({})
+         
          }
           }else{
             if(position===0){
@@ -143,10 +164,9 @@ const handleChange=(which, pick, position)=>{
       //add or remove it
       if("R1" in leftPick){
         var obk =  {...leftPick.R1}
-        console.log(leftPick.R1[position] !== undefined)
         if(leftPick.R1[position] !== undefined){
-          console.log("de")
           var obj = deleteKey(obk, position)
+
          if(position===0){
           setLeftPick({R1: obj })
           setleftChecked1(false)
@@ -158,6 +178,11 @@ const handleChange=(which, pick, position)=>{
          if(position===2){
           setLeftPick({R1: obj })
           setleftChecked3(false)
+         }
+         if(Object.keys(obj).length===0){
+          // var obk2 =  {...leftPick}
+          // delete obk2["R1"]
+          setLeftPick({})
          }
           }else{
             if(position===0){
@@ -201,7 +226,7 @@ const handleChange=(which, pick, position)=>{
 }
     return (  
         <div  className="dashboard"> 
-      
+        {console.log(rightPick)}
         <div className="HeaderR"> 
           R1:One or more present
         </div>

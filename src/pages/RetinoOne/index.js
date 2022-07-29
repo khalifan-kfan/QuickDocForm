@@ -9,7 +9,7 @@ const [leftChecked, setleftChecked] = useState(false);
 const [rightChecked, setRightChecked] = useState(false);
 const [leftPick, setLeftPick] = useState(leftSelection);
 const [rightPick, setRightPick] = useState(rightSelection);
-const [infor, setInfor] = useState([]);
+
 
 
 
@@ -54,11 +54,17 @@ const HandlePrevIn =()=>{
   if(rightChecked){
     localStorage.setItem("RRight",
      "Diabetic Renopathy Absent")
-   
+   }else{
+    localStorage.setItem("RRight",
+     "")
    }
    if(leftChecked){
     localStorage.setItem("RLeft",
      "Diabetic Renopathy Absent")
+   }
+   else{
+    localStorage.setItem("RLeft",
+     "")
    }
 }
 const handleLeftChange=(pick)=>{
