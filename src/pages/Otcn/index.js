@@ -43,7 +43,7 @@ const HandleNextin =()=>{
  if((rightChecked1 || rightChecked2 )){
   localStorage.setItem("ORight",
   "OCT negative")
- } else{
+ }else{
   localStorage.setItem("ORight",
   "")
  }
@@ -131,7 +131,7 @@ const handleChange=(which, pick, position)=>{
      }
     }
      if(!("O1" in rightPick )&& Object.keys(rightPick).length>0){
-      alert("Can't add to right eye")
+      alert("You already selected OCT")
     } 
 
   }
@@ -186,7 +186,7 @@ const handleChange=(which, pick, position)=>{
      }
     }
      if(!("O1" in leftPick )&& Object.keys(leftPick).length>0){
-      alert("Can't add to left eye")
+      alert("You already selected OCT")
     }   
 }
  

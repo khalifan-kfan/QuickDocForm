@@ -31,15 +31,29 @@
     width: 20rem;
 
   }
+  .CommonWid{
+    width: 70%;
+  }
   table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 1.3rem;
   }
+  .Lowerfill{
+    width: 100%;
+  }
+  .FirstEntry{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+  }
   .Row2{
     background-color: #fff;
-    width: 27rem;
     align-items: center;
+  }
+  .TabWid{
+    width: 100%;
   }
   
   .Row{

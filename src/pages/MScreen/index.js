@@ -76,7 +76,7 @@ const HandlePrevIn =()=>{
     localStorage.setItem("MLeft",
      "High risk moculopathy present")
    }else{
-    localStorage.setItem("MRight",
+    localStorage.setItem("MLeft",
     "")}
 
 }
@@ -222,7 +222,7 @@ const handleChange=(which, pick, position)=>{
 
     return (  
         <div  className="dashboard"> 
-         {console.log("new")}
+       
         <div className="HeaderR2"> 
         M1: One or more of the following present
       M0: All absent

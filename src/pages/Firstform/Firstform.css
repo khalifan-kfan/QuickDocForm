@@ -30,7 +30,7 @@
     justify-content: space-between;
     align-content: center;
     background-color:#005EB8;
-    padding-top: 1rem ;
+   
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -68,9 +68,7 @@
     color: black;
     background-color: white;
   }
-  .dashboard div {
-    margin-top: 7px;
-  }
+  
   .formheading{
     display: flex;
     align-items: flex-start;
@@ -90,8 +88,9 @@
   }
   .TableForm{
     display: flex;
-    gap:2rem;
+    gap: 2rem;
     flex-direction: row;
+    border: 1px solid #000;
   }
   .headerTable{
     font-weight: 600;
@@ -106,10 +105,11 @@
   .Columns{
     display: flex;
     flex-direction: column;
+    border: 1px solid #000 ;
   }
   .TableStyle{
-    width: 25rem;
-    border: 1 solid #000;
+    width: 30rem;
+    border: 1px solid #000;
   }
   .Concent{
     display: flex;
@@ -117,8 +117,10 @@
   }
   .ConcentHead{
     display: flex;
+    padding: .4rem;
 
   }
+ 
   .ConcentHead{
     background-color: #fff;
     text-align: center;
@@ -126,12 +128,14 @@
     border: 1px solid #000;
   }
   .ConcentBox{
+    padding: .4rem;
     border: 1px solid #000;
   }
   .ConcentText{
     background-color: #fff;
     text-align: center;
     width: 40rem;
+    padding: .4rem;
     border: 1px solid #000;
   }
   .TableInput{

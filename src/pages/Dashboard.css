@@ -87,6 +87,6 @@
     color: black;
     background-color: white;
   }
-  .dashboard div {
-    margin-top: 7px;
+  span{
+    padding: .4rem;
   }

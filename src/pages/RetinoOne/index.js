@@ -28,13 +28,13 @@ const HandleNextin =()=>{
     Rright: rightPick
   }
  handleNext(data)
-
  if(rightChecked){
   localStorage.setItem("RRight",
    "Diabetic Renopathy Absent")
  }else{
   localStorage.setItem("RRight",
   "")
+  //console.log("her")
  }
  if(leftChecked){
   localStorage.setItem("RLeft",
@@ -66,6 +66,7 @@ const HandlePrevIn =()=>{
     localStorage.setItem("RLeft",
      "")
    }
+   
 }
 const handleLeftChange=(pick)=>{
  
@@ -81,7 +82,7 @@ const handleLeftChange=(pick)=>{
    }
   }
    if(!("RO" in leftPick )&& Object.keys(leftPick).length>0){
-    alert("Can't add to left eye")
+    alert("You already selected Retinopathy Grade")
   } 
 }
 const handleRightChange=(pick)=>{
@@ -98,7 +99,7 @@ const handleRightChange=(pick)=>{
    }
   }
   if(!("RO" in rightPick )&& Object.keys(rightPick).length>0){
-    alert("Can't add to right eye")
+    alert("You already selected Retinopathy Grade")
   } 
 }
 
@@ -146,6 +147,7 @@ const handleRightChange=(pick)=>{
             </table>
             <span ><div  className="RigthAnswer">Right eye:</div>
             <div className="AnswerDisplay">{rightChecked?"Diabetic Renopathy Absent":""}</div></span>
+
             <span><div  className="LeftAnswer">Left eye:</div>
             <div  className="AnswerDisplay">{leftChecked?"Diabetic Renopathy Absent":""}</div></span>
            

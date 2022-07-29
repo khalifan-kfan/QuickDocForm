@@ -20,12 +20,14 @@ const HandleNextin =()=>{
   }
  handleNext(data)
  if((rightChecked1 && rightChecked2 && rightChecked3)){
+ 
   localStorage.setItem("ORight",
   "BorderLine present")
  }else{
+  console.log("her")
   localStorage.setItem("ORight",
   "")}
- if((leftChecked1 && leftChecked2&&rightChecked3)){
+ if((leftChecked1 && leftChecked2 && leftChecked3)){
   localStorage.setItem("OLeft",
   "BorderLine present")
  }else{
@@ -44,7 +46,7 @@ const HandlePrevIn =()=>{
    }else{
     localStorage.setItem("ORight",
     "")}
-   if((leftChecked1 && leftChecked2&&rightChecked3)){
+   if((leftChecked1 && leftChecked2&& leftChecked3)){
     localStorage.setItem("OLeft",
     "BorderLine present")
    }else{
@@ -143,7 +145,7 @@ const handleChange=(which, pick, position)=>{
      }
     }
      if(!("O2" in rightPick )&& Object.keys(rightPick).length>0){
-      alert("Can't add to right eye")
+      alert("You already selected OCT")
     } 
 
   }
@@ -209,7 +211,7 @@ const handleChange=(which, pick, position)=>{
      }
     }
      if(!("O2" in leftPick )&& Object.keys(leftPick).length>0){
-      alert("Can't add to left eye")
+      alert("You already selected OCT")
     } 
   }
   

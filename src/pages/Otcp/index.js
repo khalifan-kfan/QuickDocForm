@@ -54,14 +54,17 @@ const HandleNextin =()=>{
     Oright: rightPick
   }
  handleNext(data)
- if((rightChecked1 || rightChecked2 || rightChecked3|| rightChecked4)){
+ if((rightChecked1 || rightChecked2 || 
+  rightChecked3|| rightChecked4)){
+    
   localStorage.setItem("ORight",
   "OCT positive")
  }else{
   localStorage.setItem("ORight",
   "")
  }
- if((leftChecked1 || leftChecked2||rightChecked3|| rightChecked4)){
+ if((leftChecked1 || leftChecked2 ||
+   leftChecked3|| leftChecked4)){
   localStorage.setItem("OLeft",
   "OCT positive")
  }else{
@@ -82,7 +85,7 @@ const HandlePrevIn =()=>{
     localStorage.setItem("ORight",
     "")
    }
-   if((leftChecked1 || leftChecked2||rightChecked3|| rightChecked4)){
+   if((leftChecked1 || leftChecked2|| leftChecked3 || leftChecked4)){
     localStorage.setItem("OLeft",
     "OCT positive")
    }else{
@@ -165,7 +168,7 @@ const handleChange=(which, pick, position)=>{
      }
     }
      if(!("R2" in rightPick )&& Object.keys(rightPick).length>0){
-      alert("Can't add to right eye")
+      alert("You already selected OCT")
     } 
 
   }
@@ -238,7 +241,7 @@ const handleChange=(which, pick, position)=>{
      }
     }
      if(!("R2" in leftPick )&& Object.keys(leftPick).length>0){
-      alert("Can't add to left eye")
+      alert("You already selected OCT")
     } 
   }
 

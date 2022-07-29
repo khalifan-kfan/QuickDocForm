@@ -87,7 +87,7 @@ const handleChange=(which, pick, position)=>{
      }
     }
      if(!("R5" in rightPick )&& Object.keys(rightPick).length>0){
-      alert("Can't add to right eye")
+      alert("You already selected Retinopathy Grade")
     } 
 
   }
@@ -142,7 +142,7 @@ const handleChange=(which, pick, position)=>{
      }
     }
      if(!("R5" in leftPick )&& Object.keys(leftPick).length>0){
-      alert("Can't add to left eye")
+      alert("You already selected Retinopathy Grade")
     } 
   
 
@@ -164,7 +164,7 @@ const HandleNextin =()=>{
   localStorage.setItem("RRight",
   "")
  }
- if((rightChecked1 && rightChecked2  
+ if((leftChecked1 && leftChecked2  
   )){
   localStorage.setItem("RLeft",
    "Treated proliferative retinopathy present")
@@ -184,7 +184,7 @@ const HandlePrevIn =()=>{
     localStorage.setItem("RRight",
     " Treated proliferative retinopathy present")
    }
-   if((rightChecked1 && rightChecked2  
+   if((leftChecked1 && leftChecked2  
     )){
     localStorage.setItem("RLeft",
      "Treated proliferative retinopathy present")

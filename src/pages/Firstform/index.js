@@ -145,6 +145,7 @@ function Firstform({callBack}) {
                         setAge(e.target.value)
                         }else{
                             alert("Invalid age")
+                            setAge(0)
                         }
                         }
                     }
@@ -187,7 +188,8 @@ function Firstform({callBack}) {
                 <td className="ui headerTable"> height</td>
                 <td className="ui">
                     <form>
-                    <input className="TableInput" name="height" onChange={e => setHeight(e.target.value)}  type="number" placeholder="20" />
+                    <input className="TableInput" name="height" onChange={e => setHeight(e.target.value)} 
+                     type="number" placeholder="20" />
                     </form>
                 </td>
             </tr>
@@ -286,6 +288,7 @@ function Firstform({callBack}) {
                         setSBP(e.target.value)
                         }else{
                             alert("Invalid blood pressure")
+                            setSBP(0)
                         }
                         }
                     } type="number"

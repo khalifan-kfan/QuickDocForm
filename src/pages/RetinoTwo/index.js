@@ -154,7 +154,7 @@ const handleChange=(which, pick, position)=>{
      }
     }
      if(!("R1" in rightPick )&& Object.keys(rightPick).length>0){
-      alert("Can't add to right eye")
+      alert("You already selected Retinopathy Grade")
     } 
 
   }
@@ -218,7 +218,7 @@ const handleChange=(which, pick, position)=>{
      }
     }
      if(!("R1" in leftPick )&& Object.keys(leftPick).length>0){
-      alert("Can't add to left eye")
+      alert("You already selected Retinopathy Grade")
     } 
   }
 

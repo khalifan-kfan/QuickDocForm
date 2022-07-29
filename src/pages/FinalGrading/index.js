@@ -32,7 +32,8 @@ const HandlePrevIn =()=>{
 
     return (  
         <div  className="dashboard2"> 
-        <table>
+        <div className="CommonWid">
+        <table className="TabWid">
         <tr>
                 <th className="dashead">Final Grading </th>
                 <th className="dashead">Right Eye</th>
@@ -43,12 +44,12 @@ const HandlePrevIn =()=>{
                 <td className="Row">
                  {RRight}
                 </td>
-                <td className="Row"> {RLeft}</td>
+                <td className="Row">{RLeft}</td>
        </tr>
        <tr>
                 <td className="RowHead2">Maculopathy</td>
                 <td className="Row">
-                 { MRight}
+                 {MRight}
                     </td>
                 <td className="Row">{MLeft}</td>
               </tr>
@@ -63,41 +64,42 @@ const HandlePrevIn =()=>{
               </tr>
              
         </table>
-        <table>
-        <tr>
-                <td className="RowHeadw">Management Plan (Either continue annual screening, OCT surveillance 6-12m or Refer)</td>
-                <td className="Row2">
+        <div className="Lowerfill">
+        <div className="FirstEntry">
+                <div className="RowHeadw">Management Plan 
+                (Either continue annual screening, OCT surveillance 6-12m or Refer)</div>
+                <div className="Row2">
                 <form>
                     <textarea className="TableInput"
                      name="plan" onChange={e => setPlan(e.target.value)}  type="text" />
                     </form>
-                </td>
+                </div>
                 
-              </tr>
-              <tr>
-                <td className="RowHeadw">Name of Clinician</td>
-                <td className="Row2">
+          </div>
+              <div className="FirstEntry">
+                <div className="RowHeadw">Name of Clinician</div>
+                <div className="Row2">
                 <form>
                     <textarea className="TableInput"
                      name="nameC" onChange={e => setNameC(e.target.value)} 
                       type="text" />
                     </form>
-                </td>
+                </div>
                 
-              </tr>
-              <tr>
-                <td className="RowHeadw">Signature</td>
-                <td className="Row2">
+              </div>
+              <div className="FirstEntry">
+                <div className="RowHeadw">Signature</div>
+                <div className="Row2">
                 <form>
                     <textarea className="TableInput"
                      name="sign" onChange={e => setSign(e.target.value)} 
                       type="text" />
                     </form>
-                </td>
+                </div>
                 
-              </tr>
-        </table>
-       
+              </div>
+        </div>
+       </div>
         <div className="ButtonSection">
         <button
             onClick={()=>{HandlePrevIn()}}
