@@ -21,17 +21,17 @@ const HandleNextin =()=>{
  handleNext(data)
  if((rightChecked1 && rightChecked2 && rightChecked3)){
  
-  localStorage.setItem("ORight",
+  localStorage.setItem("ORightb",
   "BorderLine present")
  }else{
-  console.log("her")
-  localStorage.setItem("ORight",
+  
+  localStorage.setItem("ORightb",
   "")}
  if((leftChecked1 && leftChecked2 && leftChecked3)){
-  localStorage.setItem("OLeft",
+  localStorage.setItem("OLeftb",
   "BorderLine present")
  }else{
-  localStorage.setItem("OLeft",
+  localStorage.setItem("OLeftb",
   "")}
 }
 const HandlePrevIn =()=>{
@@ -41,16 +41,16 @@ const HandlePrevIn =()=>{
   }
   handlePrev(data)
   if((rightChecked1 && rightChecked2 && rightChecked3)){
-    localStorage.setItem("ORight",
+    localStorage.setItem("ORightb",
     "BorderLine present")
    }else{
-    localStorage.setItem("ORight",
+    localStorage.setItem("ORightb",
     "")}
    if((leftChecked1 && leftChecked2&& leftChecked3)){
-    localStorage.setItem("OLeft",
+    localStorage.setItem("OLeftb",
     "BorderLine present")
    }else{
-    localStorage.setItem("OLeft",
+    localStorage.setItem("OLeftb",
     "")}
   
 }

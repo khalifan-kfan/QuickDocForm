@@ -57,18 +57,18 @@ const HandleNextin =()=>{
  if((rightChecked1 || rightChecked2 || 
   rightChecked3|| rightChecked4)){
     
-  localStorage.setItem("ORight",
+  localStorage.setItem("ORightp",
   "OCT positive")
  }else{
-  localStorage.setItem("ORight",
+  localStorage.setItem("ORightp",
   "")
  }
  if((leftChecked1 || leftChecked2 ||
    leftChecked3|| leftChecked4)){
-  localStorage.setItem("OLeft",
+  localStorage.setItem("OLeftp",
   "OCT positive")
  }else{
-  localStorage.setItem("OLeft",
+  localStorage.setItem("OLeftp",
   "")
  }
 }
@@ -79,17 +79,17 @@ const HandlePrevIn =()=>{
   }
   handlePrev(data)
   if((rightChecked1 || rightChecked2 || rightChecked3|| rightChecked4)){
-    localStorage.setItem("ORight",
+    localStorage.setItem("ORightp",
     "OCT positive")
    }else{
-    localStorage.setItem("ORight",
+    localStorage.setItem("ORightp",
     "")
    }
    if((leftChecked1 || leftChecked2|| leftChecked3 || leftChecked4)){
-    localStorage.setItem("OLeft",
+    localStorage.setItem("OLeftp",
     "OCT positive")
    }else{
-    localStorage.setItem("OLeft",
+    localStorage.setItem("OLeftp",
     "")
    }
 }

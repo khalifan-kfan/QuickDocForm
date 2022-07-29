@@ -42,24 +42,39 @@ const HandlePrevIn =()=>{
         <tr>
                 <td className="RowHead">Retinopathy (Highest grade per eye)</td>
                 <td className="Row">
-                 {RRight}
+                 {localStorage.getItem("RRight1") && localStorage.getItem("RRight1")}
+                 {localStorage.getItem("RRight2") && localStorage.getItem("RRight2")}
+                 {localStorage.getItem("RRight3") && localStorage.getItem("RRight3")}
+                 {localStorage.getItem("RRight4") && localStorage.getItem("RRight4")}
+                 {localStorage.getItem("RRight5") && localStorage.getItem("RRight5")}
                 </td>
-                <td className="Row">{RLeft}</td>
-       </tr>
-       <tr>
+                <td className="Row">
+                   {localStorage.getItem("RLeft1") && localStorage.getItem("RLeft1")}
+                 {localStorage.getItem("RLeft2") && localStorage.getItem("RLeft2")}
+                 {localStorage.getItem("RLeft3") && localStorage.getItem("RLeft3")}
+                 {localStorage.getItem("RLeft4") && localStorage.getItem("RLeft4")}
+                 {localStorage.getItem("RLeft5") && localStorage.getItem("RLeft5")}</td>
+           </tr>
+           <tr>
                 <td className="RowHead2">Maculopathy</td>
                 <td className="Row">
-                 {MRight}
+                {MRight}
                     </td>
-                <td className="Row">{MLeft}</td>
+                <td className="Row">   
+                {MLeft}
+               </td>
               </tr>
               <tr>
                 <td className="RowHead3">OCT</td>
                 <td className="Row">
-                  {ORight}
+                {localStorage.getItem("ORightp") && localStorage.getItem("ORightp")}
+                 {localStorage.getItem("ORightn") && localStorage.getItem("ORightn")}
+                 {localStorage.getItem("ORightb") && localStorage.getItem("ORightb")}
                 </td>
                 <td className="Row">
-                  {OLeft}
+                {localStorage.getItem("OLeftp") && localStorage.getItem("OLeftp")}
+                 {localStorage.getItem("OLeftn") && localStorage.getItem("OLeftn")}
+                 {localStorage.getItem("OLeftb") && localStorage.getItem("OLeftb")}
                 </td>
               </tr>
              

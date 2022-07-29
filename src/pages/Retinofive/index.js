@@ -158,18 +158,18 @@ const HandleNextin =()=>{
  handleNext(data)
  if((rightChecked1 && rightChecked2  
   )){
-  localStorage.setItem("RRight",
+  localStorage.setItem("RRight5",
   " Treated proliferative retinopathy present")
  }else{
-  localStorage.setItem("RRight",
+  localStorage.setItem("RRight5",
   "")
  }
  if((leftChecked1 && leftChecked2  
   )){
-  localStorage.setItem("RLeft",
+  localStorage.setItem("RLeft5",
    "Treated proliferative retinopathy present")
  }else{
-  localStorage.setItem("RLeft",
+  localStorage.setItem("RLeft5",
   "")
  }
 }
@@ -181,13 +181,19 @@ const HandlePrevIn =()=>{
   handlePrev(data)
   if((rightChecked1 && rightChecked2  
     )){
-    localStorage.setItem("RRight",
+    localStorage.setItem("RRight5",
     " Treated proliferative retinopathy present")
+   }else{
+    localStorage.setItem("RRight5",
+    "")
    }
    if((leftChecked1 && leftChecked2  
     )){
-    localStorage.setItem("RLeft",
+    localStorage.setItem("RLeft5",
      "Treated proliferative retinopathy present")
+   }else{
+    localStorage.setItem("RLeft5",
+    "")
    }
 }
     return (  

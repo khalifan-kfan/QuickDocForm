@@ -29,18 +29,18 @@ const HandleNextin =()=>{
   }
  handleNext(data)
  if(rightChecked){
-  localStorage.setItem("RRight",
+  localStorage.setItem("RRight1",
    "Diabetic Renopathy Absent")
  }else{
-  localStorage.setItem("RRight",
+  localStorage.setItem("RRight1",
   "")
   //console.log("her")
  }
  if(leftChecked){
-  localStorage.setItem("RLeft",
+  localStorage.setItem("RLeft1",
    "Diabetic Renopathy Absent")
  }else{
-  localStorage.setItem("RLeft",
+  localStorage.setItem("RLeft1",
    "")
  }
 }
@@ -52,18 +52,18 @@ const HandlePrevIn =()=>{
   }
   handlePrev(data)
   if(rightChecked){
-    localStorage.setItem("RRight",
+    localStorage.setItem("RRight1",
      "Diabetic Renopathy Absent")
    }else{
-    localStorage.setItem("RRight",
+    localStorage.setItem("RRight1",
      "")
    }
    if(leftChecked){
-    localStorage.setItem("RLeft",
+    localStorage.setItem("RLeft1",
      "Diabetic Renopathy Absent")
    }
    else{
-    localStorage.setItem("RLeft",
+    localStorage.setItem("RLeft1",
      "")
    }
    

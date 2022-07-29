@@ -47,19 +47,19 @@ const HandleNextin =()=>{
  handleNext(data)
  if((rightChecked1 || rightChecked2
   || rightChecked3)){
-  localStorage.setItem("RRight",
+  localStorage.setItem("RRight2",
    "Background retinopathy present")
  }else{
-  localStorage.setItem("RRight",
+  localStorage.setItem("RRight2",
    "")
  }
  if((leftChecked1 ||
   leftChecked2 || leftChecked3)){
-  localStorage.setItem("RLeft",
+  localStorage.setItem("RLeft2",
    "Background retinopathy present")
  }
  else{
-  localStorage.setItem("RLeft",
+  localStorage.setItem("RLeft2",
    "")
  }
 }
@@ -71,18 +71,18 @@ const HandlePrevIn =()=>{
   handlePrev(data)
   if((rightChecked1 || rightChecked2
     || rightChecked3)){
-    localStorage.setItem("RRight",
+    localStorage.setItem("RRight2",
      "Background retinopathy present")
    }else{
-    localStorage.setItem("RRight",
+    localStorage.setItem("RRight2",
      "")
    }
    if((leftChecked1 ||
     leftChecked2 || leftChecked3)){
-    localStorage.setItem("RLeft",
+    localStorage.setItem("RLeft2",
      "Background retinopathy present")
    }else{
-      localStorage.setItem("RLeft",
+      localStorage.setItem("RLeft2",
        "")
      
    }

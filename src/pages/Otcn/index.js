@@ -40,18 +40,18 @@ const HandleNextin =()=>{
     Oright: rightPick
   }
  handleNext(data)
- if((rightChecked1 || rightChecked2 )){
-  localStorage.setItem("ORight",
+ if((rightChecked1 && rightChecked2 )){
+  localStorage.setItem("ORightn",
   "OCT negative")
  }else{
-  localStorage.setItem("ORight",
+  localStorage.setItem("ORightn",
   "")
  }
- if((leftChecked1 || leftChecked2)){
-  localStorage.setItem("OLeft",
+ if((leftChecked1 && leftChecked2)){
+  localStorage.setItem("OLeftn",
    "OCT negative")
  } else{
-  localStorage.setItem("OLeft",
+  localStorage.setItem("OLeftn",
   "")
  }
 }
@@ -61,19 +61,19 @@ const HandlePrevIn =()=>{
     Oright: rightPick
   }
   handlePrev(data)
-  if((rightChecked1 || rightChecked2 )){
-    localStorage.setItem("ORight",
+  if((rightChecked1 && rightChecked2 )){
+    localStorage.setItem("ORightn",
     "OCT negative")
    }
    else{
-    localStorage.setItem("ORight",
+    localStorage.setItem("ORightn",
     "")
    }
-   if((leftChecked1 || leftChecked2)){
-    localStorage.setItem("OLeft",
+   if((leftChecked1 && leftChecked2)){
+    localStorage.setItem("OLeftn",
      "OCT negative")
    }else{
-    localStorage.setItem("OLeft",
+    localStorage.setItem("OLeftn",
     "")
    }
 }
@@ -257,9 +257,9 @@ const handleChange=(which, pick, position)=>{
             </table>
             <div>* Normal CRT differ depending on machine used, check reference values for your OCT</div>
             <span ><div  className="RigthAnswer">Right eye:</div>
-            <div className="AnswerDisplay">{(rightChecked1 || rightChecked2)?"OCT negative":""}</div></span>
+            <div className="AnswerDisplay">{(rightChecked1 && rightChecked2)?"OCT negative":""}</div></span>
             <span><div  className="LeftAnswer">Left eye:</div>
-            <div  className="AnswerDisplay">{(leftChecked1 || leftChecked2)?"OCT negative":""}</div></span>
+            <div  className="AnswerDisplay">{(leftChecked1 && leftChecked2)?"OCT negative":""}</div></span>
            
           </div>
         </div>
