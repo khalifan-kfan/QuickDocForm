@@ -112,7 +112,7 @@
     border: 1px solid #000 ;
   }
   .TableStyle{
-    width: 30rem;
+   display: flex;
     border: 1px solid #000;
   }
   .Concent{
@@ -209,7 +209,15 @@ button{
     display: flex;
     justify-content: center;
   }
-  
+  .Columns{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000 ;
+   
+  }
+  .dashboard {
+    width: 120%;
+  }
   .ConcentText{
     width: 20rem;
     padding: .4rem;
