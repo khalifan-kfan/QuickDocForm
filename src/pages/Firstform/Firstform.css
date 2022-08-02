@@ -1,6 +1,5 @@
 .dashboard {
-    /* height: 100vh;
-    width: 100vw; */
+    /* height: 100vh;*/
     display: flex;
     flex-direction: column;
     gap: .3rem;
@@ -35,11 +34,16 @@
     padding-right: 1rem;
   }
   .ImageHeader{
-   width: auto;
+   width: 350px;
+   height: 127px;
   }
   .QRImageHeader{
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
+  }
+  .ImageHeadereye{
+    width: 350px;
+   height: 205px;
   }
   .RightHeader{
     display: flex;
@@ -132,9 +136,10 @@
     border: 1px solid #000;
   }
   .ConcentText{
+    display: flex;
     background-color: #fff;
     text-align: center;
-    width: 40rem;
+    
     padding: .4rem;
     border: 1px solid #000;
   }
@@ -192,4 +197,24 @@ button{
   padding: 1rem;
   border-radius: 2rem;
   width: 10rem;
+}
+@media only screen and (max-width: 981px) {
+  .dashboard {
+    overflow-x: auto;
+  }
+  .Concent{
+    flex-direction: column;
+  }
+  .ConcentBox{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .ConcentText{
+    width: 20rem;
+    padding: .4rem;
+  }
+  .TableForm{
+    flex-direction: column;
+  }
 }

@@ -38,6 +38,7 @@ function Firstform({callBack}) {
     const [Triglycerides, setTriglycerides] = useState("")
     const [Albuminuria,setAlbuminuria] = useState("")
     const [consent, setConsent] = useState(false)
+    const [noconsent, setnoConsent] = useState(false)
 
     const handleNext =()=>{
         //all fields should be filled
@@ -115,12 +116,28 @@ function Firstform({callBack}) {
                  and audit purposes, including the publication of 
                 aggregate results and sharing of anonymised data with other researchers</div>
             <div className="ConcentBox">
+                Yes
                 <div>
                 <input type="checkbox"
                  value="diabeticRetinopathy" 
-                checked={consent} 
+                checked={noconsent? false: consent} 
                 className="CheckBox" id="1" 
-                onChange={()=>setConsent(!consent)}
+                onChange={()=>{setConsent(!consent)
+                    setnoConsent(false)
+                }}
+                  />  
+                  </div>
+                  </div>
+                  <div className="ConcentBox">
+                No
+                <div>
+                <input type="checkbox"
+                 value="diabeticRetinopathy" 
+                checked={consent? false: noconsent} 
+                className="CheckBox" id="2" 
+                onChange={()=>{setConsent(false)
+                setnoConsent(!noconsent)
+                }}
                   />  
                   </div>
                   </div>
@@ -375,6 +392,9 @@ function Firstform({callBack}) {
             onClick={()=>{handleNext()}}
             >Next</button>
           </div>
+          <div  >
+            <img  className="ImageHeadereye" src={require('../../assests/Images/eyeicon.png')} alt="IASON" />
+            </div>
          </div>
       );
     }

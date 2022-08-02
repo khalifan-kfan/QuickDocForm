@@ -87,3 +87,11 @@
     color: #000;
   }  
 
+  @media only screen and (max-width: 981px) {
+    .RBody{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+    }
+  }

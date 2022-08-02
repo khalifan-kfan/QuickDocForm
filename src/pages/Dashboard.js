@@ -20,7 +20,7 @@ import MScreen from "./MScreen";
 
 function Dashboard() { 
 //state
-const [viewPosition, setviewPosition] = useState(0)
+const [viewPosition, setviewPosition] = useState(1)
 const [patientInfor,setpatientInfor] = useState({})
 //retino
 const [retinoLeft,setRetinoLeft] =  useState({})
