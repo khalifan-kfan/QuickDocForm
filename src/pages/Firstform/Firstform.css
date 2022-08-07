@@ -132,6 +132,9 @@
     border: 1px solid #000;
   }
   .ConcentBox{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     padding: .4rem;
     border: 1px solid #000;
   }
@@ -139,8 +142,6 @@
     display: flex;
     background-color: #fff;
     text-align: center;
-    
-    padding: .4rem;
     border: 1px solid #000;
   }
   .TableInput{

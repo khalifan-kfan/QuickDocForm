@@ -1,7 +1,7 @@
 import React, {  useState } from "react";
 import "./LastPage.css";
 
-function LastPage({handlePrint,handlePrev}) { 
+function LastPage({handlePrint,handlePrev,handleFormSubmission}) { 
 //state
 
 const HandleNextin =()=>{
@@ -12,6 +12,7 @@ const HandlePrevIn =()=>{
  
   handlePrev({})
 }  
+
     return (  
         <div  className="dashboard"> 
         <div className="RBodyD">
@@ -25,9 +26,12 @@ const HandlePrevIn =()=>{
             >Previous</button>
             <button
             onClick={()=>{HandleNextin()}}
-            >Click to Submit Form</button>
+            >Print</button>
+            <button
+            onClick={()=>{handleFormSubmission()}}
+            > Click to Submit Form</button>
           </div>
-          <img  className="Machine" src={require('../../assests/Images/machine.jpg')} alt="machine" />
+          {/* <img  className="Machine" src={require('../../assests/Images/machine.jpg')} alt="machine" /> */}
         </div>
         
       );

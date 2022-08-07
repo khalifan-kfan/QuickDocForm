@@ -11,33 +11,33 @@ const getDate =()=>{
   today = mm + '-' + dd + '-' + yyyy;
   return today
 }
-function Firstform({callBack}) { 
+function Firstform({callBack, patientInfor}) { 
     // state zero
-    const [name, setName] = useState("")
-    const [age, setAge] = useState("")
-    const [sex, setSex] = useState("")
-    const [visualAcuityL, setvisualAcuityL] = useState("")
-    const [visualAcuityR, setvisualAcuityR] = useState("")
-    const [height, setHeight] = useState("")
-    const [weight, setWeight] = useState("")
-    const [smoker, setSmoker] = useState("")
-    const [diaType, setdiaType] = useState("")
-    const [diaDate, setDiaDate] = useState("")
-    const [daiMed,setDiaMed] = useState("");
-    const [Hypertensive, setHypertensiveL] = useState("")
-    const[Cardiovascular ,setCardiovascular] = useState("")
-    const[OTCSleft,setOTCleft] = useState("")
-    const [OTCSright, setOTCSright] = useState("")
-    const [SBP, setSBP] = useState("")
-    const [DBP, setDBP] = useState("")
-    const [RBG, setRBG] = useState("")
-    const [HbA1C, setHbA1C] = useState("")
-    const [Cholestrol, setCholestrol] = useState("")
-    const [LDL, setLDL] = useState("")
-    const [HDL, setHDL] = useState("")
-    const [Triglycerides, setTriglycerides] = useState("")
-    const [Albuminuria,setAlbuminuria] = useState("")
-    const [consent, setConsent] = useState(false)
+    const [name, setName] = useState(patientInfor?.name ? patientInfor?.name :"" )
+    const [age, setAge] = useState(patientInfor?.age ? patientInfor?.age :"")
+    const [sex, setSex] = useState(patientInfor?.sex ? patientInfor?.sex :"")
+    const [visualAcuityL, setvisualAcuityL] = useState(patientInfor?.visualAcuityLeft ? patientInfor?.visualAcuityLeft :"")
+    const [visualAcuityR, setvisualAcuityR] = useState(patientInfor?.visualAcuityRight ? patientInfor?.visualAcuityRight :"")
+    const [height, setHeight] = useState(patientInfor?.height ? patientInfor?.height :"")
+    const [weight, setWeight] = useState(patientInfor?.weight ? patientInfor?.weight :"")
+    const [smoker, setSmoker] = useState(patientInfor?.smokerStatus ? patientInfor?.smokerStatus :"")
+    const [diaType, setdiaType] = useState(patientInfor?.diabatesType ? patientInfor?.diabatesType :"")
+    const [diaDate, setDiaDate] = useState(patientInfor?.diabatesCheckDate ? patientInfor?.diabatesCheckDate :"")
+    const [daiMed,setDiaMed] = useState(patientInfor?.daibatesMedication ? patientInfor?.daibatesMedication :"");
+    const [Hypertensive, setHypertensiveL] = useState(patientInfor?.Hypertensive ? patientInfor?.Hypertensive :"")
+    const[Cardiovascular ,setCardiovascular] = useState(patientInfor?.CardiovascularDisease ? patientInfor?.CardiovascularDisease :"")
+    const[OTCSleft,setOTCleft] = useState(patientInfor?.OTCSleft ? patientInfor?.OTCSleft :"")
+    const [OTCSright, setOTCSright] = useState(patientInfor?.OTCSright ? patientInfor?.OTCSright :"")
+    const [SBP, setSBP] = useState(patientInfor?.SBP ? patientInfor?.SBP :"")
+    const [DBP, setDBP] = useState(patientInfor?.DBP ? patientInfor?.DBP :"")
+    const [RBG, setRBG] = useState(patientInfor?.RBG ? patientInfor?.RBG :"")
+    const [HbA1C, setHbA1C] = useState(patientInfor?.HbA1C ? patientInfor?.HbA1C :"")
+    const [Cholestrol, setCholestrol] = useState(patientInfor?.Cholestrol ? patientInfor?.Cholestrol :"")
+    const [LDL, setLDL] = useState(patientInfor?.LDL ? patientInfor?.LDL :"")
+    const [HDL, setHDL] = useState(patientInfor?.HDL ? patientInfor?.HDL :"")
+    const [Triglycerides, setTriglycerides] = useState(patientInfor?.Triglycerides ? patientInfor?.Triglycerides :"")
+    const [Albuminuria,setAlbuminuria] = useState(patientInfor?.Albuminuria ? patientInfor?.Albuminuria :"")
+    const [consent, setConsent] = useState(patientInfor?.consent ? patientInfor?.consent:false )
     const [noconsent, setnoConsent] = useState(false)
 
     const handleNext =()=>{
@@ -60,16 +60,10 @@ function Firstform({callBack}) {
             OTCSright,
             SBP,
             DBP,RBG,HbA1C,Cholestrol,
-            LDL,HDL,Triglycerides,Albuminuria 
+            LDL,HDL,Triglycerides,Albuminuria ,consent
         }
         //console.log(data)
-        if(name !=="" && age  !=="" && sex !==""&& visualAcuityL  !==""&&
-        visualAcuityR  !=="" && height  !=="" && weight !=="" && smoker  !==""
-        &&diaType  !==""&& diaDate !==""&&daiMed !==""&& Hypertensive !==""&&
-        Cardiovascular !==""&& OTCSleft !==""&&OTCSright !==""&&
-        SBP!==""&& DBP !=="" && RBG  !=="" && HbA1C !=="" && Cholestrol !==""
-        && LDL !=="" && HDL !=="" && Triglycerides  !==""&&Albuminuria !=="" 
-        ){
+        if(name !=="" && age  !=="" ){
             if(age>120){
                 alert("Fill proper age") 
                 return
@@ -142,7 +136,12 @@ function Firstform({callBack}) {
                   </div>
                   </div>
           </div>
-          <span className="formheading"> Patient name: <input  onChange={e => setName(e.target.value)} className="Input" type="text" placeholder="Name"/></span>
+          <span className="formheading">
+             Patient name: <input  onChange={e => setName(e.target.value)} 
+             className="Input" 
+             value={name}
+             type="text" 
+             placeholder="Name"/></span>
          <div className="TableForm">
          <div className="Columns">
          <div className="headingCloumn"> 
@@ -206,7 +205,7 @@ function Firstform({callBack}) {
                 <td className="ui">
                     <form>
                     <input className="TableInput" name="height" onChange={e => setHeight(e.target.value)} 
-                     type="number" placeholder="20" />
+                     type="number"  placeholder="number" />
                     </form>
                 </td>
             </tr>
@@ -214,7 +213,8 @@ function Firstform({callBack}) {
                 <td className="ui headerTable"> Weight</td>
                 <td className="ui">
                     <form>
-                    <input className="TableInput"  onChange={e => setWeight(e.target.value)} name="weigth" type="number" placeholder="60" />
+                    <input className="TableInput"  onChange={e => setWeight(e.target.value)} name="weigth" type="number"
+                     placeholder="number" />
                     </form>
                 </td>
             </tr>

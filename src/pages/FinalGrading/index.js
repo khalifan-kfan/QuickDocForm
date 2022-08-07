@@ -1,10 +1,11 @@
 import React, {  useState,useEffect } from "react";
 import "./FinalGrading.css";
 
-function FinalGrading({handleNext,handlePrev}) { 
-  const [nameC, setNameC] = useState("")
-    const [plan, setPlan] = useState("")
-    const [sign,  setSign] =useState("");
+
+function FinalGrading({handleNext,handlePrev,docInfor}) { 
+  const [nameC, setNameC] = useState(docInfor?.name ? docInfor?.name: "")
+    const [plan, setPlan] = useState(docInfor?.Medicalplan ? docInfor?.Medicalplan: "")
+    const [sign,  setSign] =useState(docInfor?.sign ? docInfor?.sign: "");
 
     const [RRight,setRRight] = useState("")
     const [RLeft,setRLeft] = useState("")
@@ -23,11 +24,21 @@ useEffect(() => {
  setOLeft( localStorage.getItem("OLeft"))
 });
 const HandleNextin =()=>{
- handleNext()
+  const obj ={
+    name:nameC,
+    Medicalplan:plan,
+    sign 
+  }
+ handleNext(obj)
 }
 
 const HandlePrevIn =()=>{
-  handlePrev()
+  const obj ={
+    name:nameC,
+    Medicalplan:plan,
+    sign 
+  }
+  handlePrev(obj)
 }
 
     return (  
@@ -86,7 +97,10 @@ const HandlePrevIn =()=>{
                 <div className="Row2">
                 <form>
                     <textarea className="TableInput"
-                     name="plan" onChange={e => setPlan(e.target.value)}  type="text" />
+                     name="plan"
+                     value={plan}
+                      onChange={e => setPlan(e.target.value)} 
+                       type="text" />
                     </form>
                 </div>
                 
@@ -96,7 +110,9 @@ const HandlePrevIn =()=>{
                 <div className="Row2">
                 <form>
                     <textarea className="TableInput"
-                     name="nameC" onChange={e => setNameC(e.target.value)} 
+                     name="nameC"
+                     value={nameC}
+                      onChange={e => setNameC(e.target.value)} 
                       type="text" />
                     </form>
                 </div>
@@ -107,7 +123,9 @@ const HandlePrevIn =()=>{
                 <div className="Row2">
                 <form>
                     <textarea className="TableInput"
-                     name="sign" onChange={e => setSign(e.target.value)} 
+                     name="sign" 
+                     value={sign}
+                     onChange={e => setSign(e.target.value)} 
                       type="text" />
                     </form>
                 </div>
@@ -123,7 +141,7 @@ const HandlePrevIn =()=>{
             onClick={()=>{HandleNextin()}}
             >Next</button>
           </div>
-        
+          
         </div>
         
       );
