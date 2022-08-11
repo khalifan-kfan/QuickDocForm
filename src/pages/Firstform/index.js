@@ -72,10 +72,7 @@ function Firstform({callBack, patientInfor}) {
                 alert("Fill proper blood pressure") 
                 return
             }
-            if(!consent){
-                alert("The patient must first concent") 
-                return
-            }
+
             callBack(data)
             
         }else{

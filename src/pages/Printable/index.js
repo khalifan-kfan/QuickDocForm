@@ -1,12 +1,13 @@
-import React from "react";
-
+import React, {useEffect} from "react";
 
 export const Printable =React.forwardRef(({docInfor,patientInfor,HandlePrev}) => { 
+    // const [seen, setSeen] = useState(true);
+  useEffect(() => {
+    window.print()
+  });
     return (  
         <>
         <div >
-      
-    
             <div>
               <div>
               <div className="SubHeading"> DR SCREENING</div>
@@ -248,16 +249,20 @@ export const Printable =React.forwardRef(({docInfor,patientInfor,HandlePrev}) =>
        
       
        </div>
-       <div className="ButtonSection">
+      {/* {seen && <div className="ButtonSection">
        
         <button
             onClick={()=>{HandlePrev()}}
             >Back</button>
             <button
-            onClick={()=>{window.print()}}
+            onClick={()=>{
+                setSeen(false)
+                window.print()
+
+            }}
             > confirm and Print</button>
            
-          </div>
+          </div>} */}
        </>
     
     );
