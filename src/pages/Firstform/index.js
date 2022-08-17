@@ -89,8 +89,9 @@ function Firstform({callBack, patientInfor}) {
          <div className="HeaderSection">
 
             <div className="LeftHeader">
-            <div  >
+            <div>
             <img  className="ImageHeader" src={require('../../assests/Images/LogoICEID.png')} alt="IASON" />
+            <img  className="ImageHeadereye" src={require('../../assests/Images/eyeicon.png')} alt="IASON" />
             </div>
              </div>
              <div className="RightHeader">
